@@ -1,3 +1,5 @@
-FROM python:3.9.12-alpine
+FROM python:3.9.12-buster
+ADD . /
 WORKDIR /
-RUN pyton ./http_proxy.py
+RUN make
+CMD ["make", "run"]
